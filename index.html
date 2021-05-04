@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+        }
+
+        .card {
+            width: 600px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 2px #ccc;
+        }
+
+        .card-header {
+            border-radius: 10px 10px 0px 0px;
+            color: white;
+            font-weight: 600;
+            padding: 10px;
+            background: rgb(161, 0, 140);
+        }
+
+        .card-body {
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        a {
+            margin: 10px;
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px;
+            background: rgb(214, 19, 188);
+            color: white;
+            border-radius: 10px;
+            transition: 0.1s;
+            box-shadow: 2px 2px 2px rgb(124, 1, 106);
+        }
+
+        a:hover {
+            background: rgb(182, 7, 159);
+            transform: scaleX(1.01);
+        }
+
+        a:active {
+            background: rgb(170, 2, 148);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                List Application
+            </div>
+            <div class="card-body">
+                <a href="/background-random" target="_blank">Random Background</a>
+                <a href="/background-random" target="_blank">Random Background</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const data = [
+        { nama: 'Background Acak', link: '/background-random' },
+        { nama: 'Berat Badan Ideal', link: '/berat-badan-ideal' },
+        { nama: 'Caesar Chiper (not function)', link: '/caeser-chiper' },
+        { nama: 'Cari Huruf Besar', link: '/cari-huruf-besar' },
+        { nama: 'Cek Kurs', link: '/cek-kurs-mata-uang' },
+        { nama: 'Ikuti Mouse', link: '/circle-ikuti-mouse' },
+        { nama: 'Hitung Hari', link: '/hari-setelah-hari-ini' },
+        { nama: 'Huruf Unik (output Console)', link: '/huruf-unik' },
+        { nama: 'Profile Sederhana (dari web API)', link: '/profile-dari-api' },
+        { nama: 'Segitiga Hitam', link: '/segitiga-hitam' },
+        { nama: 'Kalkulator Sederhana (on going)', link: '/simple-calculator' },
+        { nama: 'Bermain Ulat', link: '/ulat-mouse' },
+    ];
+
+    let text = data.map((item) => `<a href="${item.link}" target="_blank">${item.nama}</a>`)
+        .reduce((acc, current) => acc + current, '');
+    document.querySelector('.card-body').innerHTML = text;
+</script>
+
+</html>
