@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+button {
+    display: block;
+    position: absolute;
+    left: 46%;
+    right: 46%;
+    top: 47%;
+    bottom: 47%;
+    font-size: 75%;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+button:active {
+    background-color: gray;
+    color: white;
+}
