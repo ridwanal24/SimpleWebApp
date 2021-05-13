@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Bookshelf Apps</title>
+</head>
+
+<body>
+    <div class="header">
+        <h2> <i class="fas fa-book"></i> Bookshelf Apps</h2>
+    </div>
+
+    <div class="container">
+        <div class="section-left">
+            <div class="card">
+                <h2>Input Buku</h2>
+                <div class="form-group">
+                    <form class="form-add">
+                        <div class="input-group">
+                            <small class="input-title">Judul Buku</small>
+                            <input type="text" class="title" placeholder="Tuliskan judul" required>
+                        </div>
+                        <div class="input-group">
+                            <small class="input-title">Penulis</small>
+                            <input type="text" class="author" placeholder="Tuliskan nama penulis" required>
+                        </div>
+                        <div class="input-group">
+                            <small class="input-title">Tahun Terbit</small>
+                            <input type="text" class="year" placeholder="Tuliskan tahun terbit" required
+                                pattern="[0-9]+">
+                        </div>
+
+                        <button type="submit" class="btn-save">Simpan</button>
+
+                        <div class="form-info">
+                            *Buku akan disimpan ke bagian "Belum Selesai Dibaca"
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card">
+                <div class="input-group">
+                    <input type="text" class="search" placeholder="Ketik untuk mencari">
+                </div>
+            </div>
+        </div>
+        <div class="section-right">
+            <div class="belum-selesai">
+                <h3>Belum Selesai Dibaca</h3>
+                <hr>
+                <div class="content">
+                    <!-- <p class="no-data">Tidak Ada Data</p> -->
+                    <!-- <div class="card book-item">
+                        <p class="book-title">Jurnal Risa New Record</p>
+                        <p class="book-author">Hayam Wuruk</p>
+                        <p class="book-year">2020</p>
+                        <button class="btn-done">Sudah selesai</button>
+                        <button class="btn-delete">Hapus</button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="sudah-selesai">
+                <h3>Sudah Selesai Dibaca</h3>
+                <hr>
+                <div class="content">
+                    <!-- <div class="card book-item">
+                        <p class="book-title">Jurnal Risa New Record</p>
+                        <p class="book-author">Hayam Wuruk</p>
+                        <p class="book-year">2020</p>
+                        <button class="btn-undone">Belum selesai</button>
+                        <button class="btn-delete">Hapus</button>
+                    </div> -->
+                    <!-- <p class="no-data">Tidak Ada Data</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <button id="myBtn">Open Modal</button> -->
+    <div id="editModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="content-header">
+                <span class="close">&times;</span>
+            </div>
+            <div class="content-body">
+                <h1>Edit Data</h1>
+                <hr>
+                <div class="form-group">
+                    <form class="form-edit">
+                        <div class="input-group">
+                            <input type="hidden" class="id">
+                            <small class="input-title">Judul Buku</small>
+                            <input type="text" class="title" placeholder="Tuliskan judul" required>
+                        </div>
+                        <div class="input-group">
+                            <small class="input-title">Penulis</small>
+                            <input type="text" class="author" placeholder="Tuliskan nama penulis" required>
+                        </div>
+                        <div class="input-group">
+                            <small class="input-title">Tahun Terbit</small>
+                            <input type="text" class="year" placeholder="Tuliskan tahun terbit" required
+                                pattern="[0-9]+">
+                        </div>
+                        <button type="submit" class="btn-edit-save">Simpan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="./js/data.js"></script>
+    <script src="./js/function.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
