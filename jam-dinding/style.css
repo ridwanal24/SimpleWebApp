@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: orange;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.jam {
+    width: 300px;
+    height: 300px;
+}
+
+.jarum-detik__section {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    /* transform: rotate(20deg); */
+    /* z-index: 200; */
+}
+
+.jarum-menit__section {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    /* z-index: 200; */
+}
+
+.jarum-jam__section {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    /* z-index: 200; */
+}
+
+.jarum-detik {
+    width: 3px;
+    background: red;
+    height: 180px;
+    margin: 10px;
+}
+
+.jarum-menit {
+    width: 5px;
+    background: black;
+    height: 160px;
+    margin: 10px;
+}
+
+.jarum-jam {
+    width: 7px;
+    background: black;
+    height: 130px;
+    margin: 40px;
+}
+
+.jam-digital {
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    position: absolute;
+    width: 93%;
+    color: white;
+    margin-top: 400px;
+}
