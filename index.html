@@ -89,9 +89,10 @@
         { nama: 'Manajemen Buku', link: '/manajemen-buku' },
         { nama: 'Kalkulator Sederhana (on going)', link: '/simple-calculator' },
         { nama: 'Bermain Ulat', link: '/ulat-mouse' },
+        { nama: 'Desain Login Form', link: '/login-form' },
     ];
 
-    let text = data.map((item) => `<a href="${item.link}" target="_blank">${item.nama}</a>`)
+    let text = data.map((item) => `<a href="/SimpleWebApp${item.link}" target="_blank">${item.nama}</a>`)
         .reduce((acc, current) => acc + current, '');
     document.querySelector('.card-body').innerHTML = text;
 </script>
