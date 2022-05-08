@@ -13,6 +13,18 @@ function init() {
     fruits.push('anggur')
     fruits.push('pisang')
     fruits.push('semangka')
+
+    // add background
+    let fruitsListText = ''
+    fruits.map(item => {
+
+        fruitsListText += `
+        <img src="./image/${item}.png" alt="fruit" />
+        `
+    })
+    document.querySelector('.fruit-list').innerHTML = fruitsListText
+
+    // double 
     fruits = fruits.concat(fruits)
 
     // shuffle
@@ -20,13 +32,9 @@ function init() {
 
     // draw & generate show card status
     let text = ''
-    let fruitsListText = ''
     fruits.map((item, index) => {
         isShow.push(false)
 
-        fruitsListText += `
-            <img src="./image/${item}.png" alt="fruit" />
-        `
 
         text += `
         <div class="card-grid">
@@ -36,7 +44,6 @@ function init() {
         </div>`
     })
     document.querySelector('.game-area').innerHTML = text
-    document.querySelector('.fruit-list').innerHTML = fruitsListText
     // indexing card DOM
     cardsDOM = Array.from(document.querySelectorAll('.card'))
 }
@@ -122,6 +129,7 @@ document.querySelector('.btn-start').addEventListener('click', function (e) {
     } else {
         console.log('restart')
         restartGame()
+        startGame()
         init()
     }
 })
