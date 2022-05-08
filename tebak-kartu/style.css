@@ -96,3 +96,16 @@ body {
     z-index: 1000;
     box-shadow: 0 0 3px orange;
 }
+
+.fruit-list {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: -100;
+    opacity: .2;
+}
+
+.fruit-list img {
+    width: 20%;
+}

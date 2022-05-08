@@ -20,8 +20,14 @@ function init() {
 
     // draw & generate show card status
     let text = ''
+    let fruitsListText = ''
     fruits.map((item, index) => {
         isShow.push(false)
+
+        fruitsListText += `
+            <img src="./image/${item}.png" alt="fruit" />
+        `
+
         text += `
         <div class="card-grid">
             <div class="card" onclick="flip(${index})">
@@ -30,7 +36,7 @@ function init() {
         </div>`
     })
     document.querySelector('.game-area').innerHTML = text
-
+    document.querySelector('.fruit-list').innerHTML = fruitsListText
     // indexing card DOM
     cardsDOM = Array.from(document.querySelectorAll('.card'))
 }
@@ -106,7 +112,6 @@ function gameFinished() {
     document.querySelector('.mask').innerHTML = 'Congratulations!!!'
 }
 
-init()
 
 document.querySelector('.btn-start').addEventListener('click', function (e) {
     if (!isPlaying) {
@@ -120,3 +125,5 @@ document.querySelector('.btn-start').addEventListener('click', function (e) {
         init()
     }
 })
+
+init()
