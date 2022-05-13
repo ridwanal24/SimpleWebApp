@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    background-image: url('./assets/taman_sari_black.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 35%;
+}
+
+.form-area {
+    background-color: #e5e5e5;
+    padding: 30px 20px;
+    border-radius: 10px;
+    color: #222a37;
+    box-shadow: 0 0 50px black;
+}
+
+label {
+    display: block;
+    opacity: 0.5;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    font-size: large;
+}
+
+.date {
+    display: flex;
+}
+
+.checkin-date input {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+}
+
+.checkout-date input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.checkin-date,
+.checkout-date {
+    width: 50%;
+    font-size: larger;
+}
+
+.booking {
+    display: flex;
+}
+
+.booking-item {
+    width: 33.333333333%;
+}
+
+.room input {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.adults input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.kids input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.additional {
+    position: absolute;
+    background-color: #ff455b;
+    color: white;
+    font-size: larger;
+    text-align: center;
+    padding: 25px;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: -10px;
+    border-radius: 10px;
+    z-index: -100;
+    bottom: -15%;
+    left: 10%;
+
+}
+
+@media only screen and (max-width: 992px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 70%;
+    }
+}
